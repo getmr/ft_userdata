@@ -29,6 +29,7 @@ from freqtrade.strategy import (
     stoploss_from_absolute,
     stoploss_from_open,
 )
+from freqtrade.strategy.interface import logger
 
 # --------------------------------
 # Add your lib to import here
@@ -120,6 +121,7 @@ class MACDStrategy(IStrategy):
         """
         计算技术指标
         """
+        logger.info("--------------------------------metadata--------------------------------: %s", metadata)
         # 计算1小时线MACD
         macd = ta.MACD(
             dataframe,

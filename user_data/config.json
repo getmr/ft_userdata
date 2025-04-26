@@ -7,6 +7,10 @@
     "fiat_display_currency": "USD",
     "dry_run": true,
     "dry_run_wallet": 1000,
+    "fiat_converter": {
+        "enabled": true,
+        "data_source": "gateio"
+    },
     "cancel_open_orders_on_exit": false,
     "trading_mode": "spot",
     "margin_mode": "",
@@ -33,10 +37,27 @@
     },
     "exchange": {
         "name": "gateio",
-        "key": "",
-        "secret": "",
-        "ccxt_config": {},
-        "ccxt_async_config": {},
+        "key": "3f4b208008ffd2a940b64089737233e9",
+        "secret": "9ce35be0e33f0d38900c8839a6467a909216193bdfe8a82396cacc865f32c0de",
+        "ccxt_config": {
+            "enableRateLimit": true,
+            "timeout": 30000,
+            "retries": 3,
+            "options": {
+                "defaultType": "spot",
+                "adjustForTimeDifference": true,
+                "urls": {
+                    "api": {
+                        "public": "https://api.gateio.ws/api/v4",
+                        "private": "https://api.gateio.ws/api/v4"
+                    }
+                }
+            }
+        },
+        "ccxt_async_config": {
+            "timeout": 30000,
+            "retries": 3
+        },
         "pair_whitelist": [
             "ETH5L/USDT",
             "ETH5S/USDT",
@@ -77,5 +98,13 @@
     "force_entry_enable": false,
     "internals": {
         "process_throttle_secs": 5
+    },
+    "data_provider": {
+        "name": "gateio",
+        "ccxt_config": {
+            "enableRateLimit": true,
+            "timeout": 30000,
+            "retries": 3
+        }
     }
 }
