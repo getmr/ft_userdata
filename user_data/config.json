@@ -46,6 +46,7 @@
             "options": {
                 "defaultType": "spot",
                 "adjustForTimeDifference": true,
+                "timezone": "Asia/Shanghai",
                 "urls": {
                     "api": {
                         "public": "https://api.gateio.ws/api/v4",
@@ -91,7 +92,8 @@
         "ws_token": "2Hi6M-_VCjKXdIVzArzlhvhZ4py57E6FGA",
         "CORS_origins": [],
         "username": "freqtrader",
-        "password": "1a2s3dqwe"
+        "password": "1a2s3dqwe",
+        "timezone": "Asia/Shanghai"
     },
     "bot_name": "freqtrade",
     "initial_state": "running",
@@ -106,5 +108,6 @@
             "timeout": 30000,
             "retries": 3
         }
-    }
+    },
+    "timezone": "Asia/Shanghai"
 }
